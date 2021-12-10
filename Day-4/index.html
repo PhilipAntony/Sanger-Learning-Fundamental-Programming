@@ -1,0 +1,156 @@
+<script>
+  // Cek Nilai
+  //   let nama = prompt("Silahkan masukkan nama anda: ");
+  //   let nilai = prompt(`Halo ${nama}, silahkan masukkan nilai anda: `);
+
+  //   if (nilai >= 90 && nilai < 100) {
+  //     alert("Kamu mendapat predikat A");
+  //   } else if (nilai >= 80 && nilai < 90) {
+  //     alert("Kamu mendapat predikat B+");
+  //   } else if (nilai >= 70 && nilai < 80) {
+  //     alert("Kamu mendapat predikat B");
+  //   } else if (nilai >= 0 && nilai < 70) {
+  //     alert("Kamu tidak lulus");
+  //   } else if (nilai === "100") {
+  //     alert("Excelent");
+  //   } else {
+  //     alert("Kamu salah menginput nilai");
+  //   }
+
+  //Suwit
+  // Permainan 1
+
+  //   let player1 = prompt("Player1: Batu/Gunting/Kertas").toLowerCase();
+  //   let player2 = prompt("Player2: Batu/Gunting/Kertas").toLowerCase();
+  //   let nilaiPlayer1 = 0;
+  //   let nilaiPlayer2 = 0;
+
+  //   if (player1 == player2) {
+  //     alert(`Hasilnya adalah ${hasil}`);
+  //   } else if (player1 == "batu") {
+  //     if (player2 == "gunting") {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 =${nilaiPlayer1}, Player2 = ${nilaiPlayer2}`);
+  //     }
+  //   } else if (player1 == "gunting") {
+  //     if (player2 == "batu") {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 =${nilaiPlayer1}, Player2 = ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     }
+  //   } else if (player1 == "kertas") {
+  //     if (player2 == "batu") {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     }
+  //   }
+
+  //   let player11 = prompt("Player1: Batu/Gunting/Kertas").toLowerCase();
+  //   let player22 = prompt("Player2: Batu/Gunting/Kertas").toLowerCase();
+
+  //   if (player11 == player22) {
+  //     alert(`Hasilnya adalah ${hasil}`);
+  //   } else if (player11 == "batu") {
+  //     if (player22 == "gunting") {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 =${nilaiPlayer1}, Player2 = ${nilaiPlayer2}`);
+  //     }
+  //   } else if (player11 == "gunting") {
+  //     if (player22 == "batu") {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 =${nilaiPlayer1}, Player2 = ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     }
+  //   } else if (player11 == "kertas") {
+  //     if (player22 == "batu") {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     }
+  //   }
+
+  //   let player111 = prompt("Player1: Batu/Gunting/Kertas").toLowerCase();
+  //   let player222 = prompt("Player2: Batu/Gunting/Kertas").toLowerCase();
+  //   if (player111 == player222) {
+  //     alert(`Hasilnya adalah ${hasil}`);
+  //   } else if (player111 == "batu") {
+  //     if (player222 == "gunting") {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 =${nilaiPlayer1}, Player2 = ${nilaiPlayer2}`);
+  //     }
+  //   } else if (player111 == "gunting") {
+  //     if (player222 == "batu") {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 =${nilaiPlayer1}, Player2 = ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     }
+  //   } else if (player111 == "kertas") {
+  //     if (player222 == "batu") {
+  //       nilaiPlayer1 += 1;
+  //       alert(`Player1 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     } else {
+  //       nilaiPlayer2 += 1;
+  //       alert(`Player2 Menang, Player1 = ${nilaiPlayer1}, Player2= ${nilaiPlayer2}`);
+  //     }
+  //   }
+
+  // Suwit Lagi
+  let player1 = prompt("Player1: Batu/Gunting/Kertas").toLowerCase();
+  let player2 = prompt("Player2: Batu/Gunting/Kertas").toLowerCase();
+
+  switch (true) {
+    case player1 == player2:
+      alert("Hasil Seri");
+      break;
+    case player1 == "batu":
+      switch (true) {
+        case player2 == "gunting":
+          alert("Player1 Menang");
+          break;
+        case player2 == "kertas":
+          alert("Player2 Menang");
+          break;
+      }
+      break;
+    case player1 == "gunting":
+      switch (true) {
+        case player2 == "batu":
+          alert("Player2 Menang");
+          break;
+        case player2 == "kertas":
+          alert("Player1 Menang");
+          break;
+      }
+      break;
+    case player1 == "kertas":
+      switch (true) {
+        case player2 == "batu":
+          alert("Player1 Menang");
+          break;
+        case player2 == "gunting":
+          alert("Player2 Menang");
+          break;
+      }
+      break;
+  }
+</script>
