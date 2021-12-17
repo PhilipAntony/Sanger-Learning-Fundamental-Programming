@@ -1,0 +1,50 @@
+<script>
+  let m, k, waktu;
+  let ulang = true;
+  let $1jam = 3000;
+  let $jam = 1000;
+  let bayar = 0;
+
+  do {
+    do {
+      m = prompt("Masukkan Jam Masuk: ");
+      if (m >= 0 && m <= 24) {
+        do {
+          k = prompt("Masukkan Jam Keluar: ");
+          if (k >= 0 && k <= 24) {
+            waktu = k - m;
+            if (k == m) {
+              bayar = $1jam;
+              alert(`Biaya parkir anda adalah: ${bayar}`);
+            } else if (k > m) {
+              let sisa = waktu - 1;
+              if (sisa == 0) {
+                bayar = $1jam;
+                alert(`Biaya parkir anda adalah: ${bayar}`);
+              } else {
+                bayar = $1jam + sisa * $jam;
+                alert(`Biaya parkir anda adalah: ${bayar}`);
+              }
+            }
+          }
+          if (k > 24) {
+            alert("Angka yang dimasukkan terlalu besar. Waktu maksimal dalam sehari hanya 24 jam");
+          } else if (k < 0) {
+            alert("Angka yang dimasukkan terlalu kecil. Waktu minimal dalam sehari adalah 0");
+          } else if (!(k >= 0) && !(k <= 24)) {
+            alert("Yang anda masukkan bukan angka");
+          }
+        } while (!(k >= 0) && !(k <= 24));
+      }
+      if (m > 24) {
+        alert("Angka yang dimasukkan terlalu besar. Waktu maksimal dalam sehari hanya 24 jam");
+      } else if (m < 0) {
+        alert("Angka yang dimasukkan terlalu kecil. Waktu minimal dalam sehari adalah 0");
+      } else if (!(m >= 0) && !(m <= 24)) {
+        alert("Yang anda masukkan bukan angka");
+      }
+    } while (!(m >= 0) && !(m <= 24));
+
+    ulang = confirm("Ulangi perhitungan?");
+  } while (ulang);
+</script>

@@ -1,0 +1,20 @@
+<script>
+  let terus1 = true;
+  let y;
+  let z;
+  let a;
+  let b;
+
+  y = prompt("Masukkan angka");
+  z = y.split(" ");
+
+  if (z.length % 2 == 1) {
+    a = Math.floor(z.length / 2);
+    alert(z[a]);
+  } else {
+    a = z.length / 2;
+    b = a - 1;
+
+    alert((Number(z[a]) + Number(z[b])) / 2);
+  }
+</script>
