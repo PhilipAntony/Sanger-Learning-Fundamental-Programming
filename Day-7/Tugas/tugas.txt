@@ -1,0 +1,3 @@
+Buat program cek nama dan cek email.
+
+cek apakah nama terdapat angka, dan email mengandung @ dan .

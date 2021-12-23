@@ -1,0 +1,43 @@
+<script>
+  let ulang;
+
+  do {
+    let namaSalah;
+    do {
+      let nama = prompt("Masukkan nama anda: ");
+      let nama1 = nama.split("");
+      for (i = 0; i < nama1.length; i++) {
+        if (nama[i] > 0 || nama[i] <= 0) {
+          alert("Nama anda tidak valid karena mengandung angka!");
+          namaSalah = true;
+          break;
+        } else {
+          namaSalah = false;
+        }
+      }
+    } while (namaSalah);
+
+    let emailSalah;
+    do {
+      let email = prompt("Masukkan email anda: ");
+      let email1 = email.split(".");
+
+      if (email1.length <= 1) {
+        alert("Email anda tidak valid karena tidak mengandung tanda titik (.)");
+        emailSalah = true;
+      } else {
+        let email2 = email.split("@");
+
+        if (email2.length <= 1) {
+          alert("Email anda tidak valid karena tidak mengandung @");
+          emailSalah = true;
+        } else {
+          alert("Selamat, Nama dan Email anda valid!");
+          emailSalah = false;
+        }
+      }
+    } while (emailSalah);
+
+    ulang = confirm("Apakah anda ingin mengecek nama lagi?");
+  } while (ulang);
+</script>

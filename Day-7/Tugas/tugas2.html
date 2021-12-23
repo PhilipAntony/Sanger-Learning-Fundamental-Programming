@@ -1,0 +1,29 @@
+<script>
+  let ulang;
+  do {
+    let namaSalah;
+    do {
+      let nama = prompt("Masukkan nama anda: ");
+      if (nama.match(/\d+/)) {
+        alert("Nama anda tidak valid karena mengandung angka!");
+        namaSalah = true;
+      } else {
+        namaSalah = false;
+      }
+    } while (namaSalah);
+
+    let emailSalah;
+    do {
+      let email = prompt("Masukkan email anda: ");
+      if (email.includes(".") && email.includes("@")) {
+        alert("Selamat, nama dan email anda sudah valid!");
+        emailSalah = false;
+      } else {
+        alert("Email anda tidak valid karena tidak mengandung (.) atau (@)!");
+        emailSalah = true;
+      }
+    } while (emailSalah);
+
+    ulang = confirm("Apakah anda ingin mengecek nama sekali lagi?");
+  } while (ulang);
+</script>
