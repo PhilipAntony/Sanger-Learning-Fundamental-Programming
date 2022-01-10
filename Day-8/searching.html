@@ -1,0 +1,22 @@
+<script>
+  let arr = ["BK 1224 LE", "BK 12 HA", "B 1 RI", "B 20 KL"];
+  let search = prompt(`Masukkan keyword:`);
+  let arr2 = [];
+
+  arr.forEach(function (m) {
+    if (m.includes(search.toUpperCase())) {
+      arr2.push(m);
+    }
+  });
+
+  let output = "";
+  arr2.forEach((m, i) => {
+    output += outss(m, i);
+  });
+
+  alert(output);
+
+  function outss(m, i) {
+    return `${i + 1}. ${m}\n`;
+  }
+</script>
