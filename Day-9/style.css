@@ -1,0 +1,42 @@
+.header {
+  text-align: center;
+  background-color: bisque;
+  padding: 50px;
+}
+
+.container {
+  text-align: center;
+}
+
+.my-input {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 15px;
+}
+.my-button {
+  padding: 10px;
+  font-size: 15px;
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: rgb(96, 177, 180);
+}
+
+.my-list {
+  text-align: center;
+}
+
+.value,
+.x-button {
+  cursor: pointer;
+}
+
+.value-onclick {
+  text-decoration-line: line-through;
+}
+
+.my-list {
+  list-style: none;
+}
