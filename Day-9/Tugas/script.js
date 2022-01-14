@@ -18,11 +18,17 @@ mySubmitButton.addEventListener("click", function () {
   const warna = document.querySelector("#warna");
   const harga = document.querySelector("#harga");
 
+  if (merk.value == "" || jenis.value == "" || warna.value == "" || harga.value == "") {
+    merk.focus();
+    return false;
+  }
+
+  console.log(merk.value);
   let newMotor = new newMotorcycle(merk.value, jenis.value, warna.value, harga.value);
   motorList.push(newMotor);
 
   merk.value = "";
-  jenis.value = "";
+  jenis.value = "Bebek";
   warna.value = "";
   harga.value = "";
 
@@ -45,11 +51,14 @@ mySubmitButton.addEventListener("click", function () {
 
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("hapus")) {
-    myNums--;
-    const myIndex = e.target.dataset.index;
-    e.target.parentNode.parentNode.remove();
+    let confirmHapus = confirm("Yakin ingin menghapus data motor ini?");
+    if (confirmHapus) {
+      myNums--;
+      const myIndex = e.target.dataset.index;
+      e.target.parentNode.parentNode.remove();
 
-    motorList.splice(myIndex, 1);
+      motorList.splice(myIndex, 1);
+    }
   }
 
   if (e.target.classList.contains("ubah")) {
@@ -74,23 +83,26 @@ const hideMotorIndex = document.querySelector(".motor-index");
 hideMotorIndex.style.display = "none";
 
 saveChangeButton.addEventListener("click", function () {
-  const merk = document.querySelector("#merkUbah");
-  const jenis = document.querySelector("#jenisUbah");
-  const warna = document.querySelector("#warnaUbah");
-  const harga = document.querySelector("#hargaUbah");
-  const motorIndex = document.querySelector("#motorIndex");
+  let confirmUbah = confirm("Yakin ingin mengubah data?");
+  if (confirmUbah) {
+    const merk = document.querySelector("#merkUbah");
+    const jenis = document.querySelector("#jenisUbah");
+    const warna = document.querySelector("#warnaUbah");
+    const harga = document.querySelector("#hargaUbah");
+    const motorIndex = document.querySelector("#motorIndex");
 
-  console.log(motorIndex.value);
+    console.log(motorIndex.value);
 
-  motorList[motorIndex.value].merk = merk.value;
-  motorList[motorIndex.value].jenis = jenis.value;
-  motorList[motorIndex.value].warna = warna.value;
-  motorList[motorIndex.value].harga = harga.value;
+    motorList[motorIndex.value].merk = merk.value;
+    motorList[motorIndex.value].jenis = jenis.value;
+    motorList[motorIndex.value].warna = warna.value;
+    motorList[motorIndex.value].harga = harga.value;
 
-  const tableContainer = document.querySelector(".table-container");
+    const tableContainer = document.querySelector(".table-container");
 
-  tableContainer.rows[Number(motorIndex.value) + 1].cells[0].innerHTML = merk.value;
-  tableContainer.rows[Number(motorIndex.value) + 1].cells[1].innerHTML = jenis.value;
-  tableContainer.rows[Number(motorIndex.value) + 1].cells[2].innerHTML = warna.value;
-  tableContainer.rows[Number(motorIndex.value) + 1].cells[3].innerHTML = harga.value;
+    tableContainer.rows[Number(motorIndex.value) + 1].cells[0].innerHTML = merk.value;
+    tableContainer.rows[Number(motorIndex.value) + 1].cells[1].innerHTML = jenis.value;
+    tableContainer.rows[Number(motorIndex.value) + 1].cells[2].innerHTML = warna.value;
+    tableContainer.rows[Number(motorIndex.value) + 1].cells[3].innerHTML = harga.value;
+  }
 });

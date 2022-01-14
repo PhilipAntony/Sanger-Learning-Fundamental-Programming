@@ -1,0 +1,35 @@
+<script>
+  let pesertaUndian = [];
+  let namaPeserta;
+
+  do {
+    let nama = prompt("Masukkan nama Peserta");
+    pesertaUndian.push(nama);
+    namaPeserta = confirm("Masih ingin menambah peserta?");
+  } while (namaPeserta);
+
+  let lakukanUndian;
+
+  do {
+    let myNumber = Math.floor(Math.random() * pesertaUndian.length);
+    let namaPesertaTersisa = "Nama peserta\n";
+
+    pesertaUndian.forEach(function (e, i) {
+      namaPesertaTersisa += `${i + 1}. ${e}\n`;
+    });
+
+    alert(namaPesertaTersisa);
+
+    alert("Yang keluar di sesi ini adalah " + pesertaUndian[Number(myNumber)]);
+    pesertaUndian.splice(Number(myNumber), 1);
+
+    if (pesertaUndian.length == 1) {
+      alert("Pemenang undian sudah ditemukan");
+      break;
+    }
+
+    lakukanUndian = confirm("Undi lagi?");
+  } while (lakukanUndian);
+
+  alert(`Yang memenangkan undian adalah: ${pesertaUndian[0]}`);
+</script>

@@ -43,7 +43,12 @@
                   </div>
                   <div class="mb-3">
                     <label for="jenis" class="form-label">Jenis Motor</label>
-                    <input type="text" class="form-control" id="jenis" autocomplete="off" required />
+                    <select name="jenis-motor" id="jenis" class="form-select">
+                      <option value="Bebek">Bebek</option>
+                      <option value="Matic">Matic</option>
+                      <option value="bebek">Kopling</option>
+                      <option value="bebek">Lainnya</option>
+                    </select>
                   </div>
                   <div class="mb-3">
                     <label for="warna" class="form-label">Warna Motor</label>
@@ -51,7 +56,7 @@
                   </div>
                   <div class="mb-3">
                     <label for="harga" class="form-label">Harga Motor</label>
-                    <input type="text" class="form-control" id="harga" autocomplete="off" required />
+                    <input type="number" class="form-control" id="harga" autocomplete="off" required />
                   </div>
                   <button type="button" class="btn btn-primary my-submit-button">Tambahkan</button>
                 </form>
