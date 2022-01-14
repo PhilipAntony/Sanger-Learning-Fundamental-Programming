@@ -1,0 +1,88 @@
+/* font-family: 'Outfit', sans-serif; */
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+}
+
+/* Start Home */
+.home {
+  background-image: url(img/thumbnail/2.jpg);
+  min-height: 760px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+  padding: 40px 0;
+}
+
+.home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(167, 169, 171, 0.25);
+}
+.home * {
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.page-content {
+  margin-top: 3em;
+}
+
+.page-form,
+.page-table {
+  margin-top: 0.7em;
+}
+
+.my-submit-button {
+  background-color: hsl(192, 4%, 34%);
+  border: 1px solid hsl(192, 4%, 34%);
+}
+
+.my-submit-button:hover {
+  background-color: #848c8e;
+  border: 1px solid #848c8e;
+}
+
+.my-submit-button:active {
+  background-color: #848c8e;
+  border: 1px solid #848c8e;
+}
+table {
+  width: 100%;
+  text-align: center;
+  border-color: #a7a9ab;
+  background-color: #1a1a1c;
+}
+
+.ubah,
+.hapus {
+  cursor: pointer;
+}
+
+.ubah:hover,
+.hapus:hover {
+  color: hsl(0, 0%, 80%);
+}
+
+.modal {
+  color: black;
+}
+
+.modal .save-change {
+  background-color: hsl(192, 4%, 34%);
+  border: 1px solid hsl(192, 4%, 34%);
+}
+
+.modal .save-change:hover {
+  background-color: #848c8e;
+  border: 1px solid #848c8e;
+}
+/* End Home */
